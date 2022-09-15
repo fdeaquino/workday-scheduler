@@ -24,8 +24,16 @@ $(".saveBtn").on("click", function() {
     localStorage.setItem(key, value)
 })
 
-$("#9 textarea").val(localStorage.getItem("9"))
-
 // WHEN I refresh the page
 // THEN the saved events persist
 // TODO: need to getItem from localStorage for each time container/block
+
+$("#9 textarea").val(localStorage.getItem("9"))
+$("#10 textarea").val(localStorage.getItem("10"))
+$("#11 textarea").val(localStorage.getItem("11"))
+$("#12 textarea").val(localStorage.getItem("12"))
+$("#1 textarea").val(localStorage.getItem("1"))
+$("#2 textarea").val(localStorage.getItem("2"))
+$("#3 textarea").val(localStorage.getItem("3"))
+$("#4 textarea").val(localStorage.getItem("4"))
+$("#5 textarea").val(localStorage.getItem("5"))
