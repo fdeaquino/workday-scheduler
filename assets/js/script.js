@@ -5,11 +5,20 @@ $("#currentDay").text(moment().format("MMM Do YYYY"));
 
 // WHEN I scroll down
 // THEN I am presented with timeblocks for standard business hours
+// Done on HTML
+
 // WHEN I view the timeblocks for that day
 // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+// TODO: add conditional formatting and setInverval function to audit the time and update the conditional formatting
+
 // WHEN I click into a timeblock
 // THEN I can enter an event
+// Done on HTML with textarea
+
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
+// TODO: add click event to save buttons/icons to save to local storage
+
 // WHEN I refresh the page
 // THEN the saved events persist
+// TODO: need to getItem from localStorage for each time container/block
