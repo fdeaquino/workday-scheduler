@@ -14,6 +14,7 @@ $("#currentDay").text(moment().format("MMM Do YYYY"));
 let currentMoment = moment().hour();
 console.log(currentMoment);
 
+// queries the time-block class, gets the nuber id for each hour/time container and parses it to determine if it is in the future, present or past
 function auditTime() {
     $(".time-block").each(function() {
         let timeContainer = parseInt($(this).attr("id"));
@@ -27,7 +28,7 @@ function auditTime() {
         }
     })
 };
-
+// calls the auditTime function
 auditTime();
 
 // WHEN I click into a timeblock
@@ -46,13 +47,13 @@ $(".saveBtn").on("click", function() {
 // WHEN I refresh the page
 // THEN the saved events persist
 // TODO: need to getItem from localStorage for each time container/block
-
+// changed div id's to match 24hr format because conditional formatting wasn't working with 12hr format
 $("#9 textarea").val(localStorage.getItem("9"))
 $("#10 textarea").val(localStorage.getItem("10"))
 $("#11 textarea").val(localStorage.getItem("11"))
 $("#12 textarea").val(localStorage.getItem("12"))
-$("#1 textarea").val(localStorage.getItem("1"))
-$("#2 textarea").val(localStorage.getItem("2"))
-$("#3 textarea").val(localStorage.getItem("3"))
-$("#4 textarea").val(localStorage.getItem("4"))
-$("#5 textarea").val(localStorage.getItem("5"))
+$("#13 textarea").val(localStorage.getItem("1"))
+$("#14 textarea").val(localStorage.getItem("2"))
+$("#15 textarea").val(localStorage.getItem("3"))
+$("#16 textarea").val(localStorage.getItem("4"))
+$("#17 textarea").val(localStorage.getItem("5"))
