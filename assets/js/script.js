@@ -10,6 +10,25 @@ $("#currentDay").text(moment().format("MMM Do YYYY"));
 // WHEN I view the timeblocks for that day
 // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 // TODO: add conditional formatting and setInverval function to audit the time and update the conditional formatting
+// shows hour because the time containers change by the hour - console shows hour in 24hr format
+let currentMoment = moment().hour();
+console.log(currentMoment);
+
+function auditTime() {
+    $(".time-block").each(function() {
+        let timeContainer = parseInt($(this).attr("id"));
+        console.log(timeContainer);
+        if (timeContainer > currentMoment) {
+            $(this).addClass("future");
+        } else if (timeContainer === currentMoment) {
+            $(this).addClass("present");
+        } else {
+            $(this).addClass("past");
+        }
+    })
+};
+
+auditTime();
 
 // WHEN I click into a timeblock
 // THEN I can enter an event
