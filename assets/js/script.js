@@ -57,3 +57,8 @@ $("#14 textarea").val(localStorage.getItem("2"))
 $("#15 textarea").val(localStorage.getItem("3"))
 $("#16 textarea").val(localStorage.getItem("4"))
 $("#17 textarea").val(localStorage.getItem("5"))
+
+// added setInterval to run the auditTime function every 30 minutes to update the conditional formatting on the page
+setInterval(function() {
+    auditTime();
+}, (1000 * 60) * 30);
