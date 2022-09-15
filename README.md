@@ -29,10 +29,10 @@ THEN the saved events persist
 ```
 
 ## Screenshot
-![Screenshot]()
+![Screenshot](./assets/images/Workday-Scheduler-Screenshot.png)
 
 ## Deployed Site
-[Workday Scheduler]()
+[Workday Scheduler](https://fdeaquino.github.io/workday-scheduler/)
 
 ## Contribution
 Made with ❤️ by Fidel Deaquino
