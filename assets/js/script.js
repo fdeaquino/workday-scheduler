@@ -14,10 +14,17 @@ $("#currentDay").text(moment().format("MMM Do YYYY"));
 // WHEN I click into a timeblock
 // THEN I can enter an event
 // Done on HTML with textarea
-
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
 // TODO: add click event to save buttons/icons to save to local storage
+$(".saveBtn").on("click", function() {
+    var key = $(this).parent().attr("id");
+    var value = $(this).siblings("textarea").val();
+
+    localStorage.setItem(key, value)
+})
+
+$("#9 textarea").val(localStorage.getItem("9"))
 
 // WHEN I refresh the page
 // THEN the saved events persist
