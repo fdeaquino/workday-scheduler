@@ -1,6 +1,8 @@
 // GIVEN I am using a daily planner to create a schedule
 // WHEN I open the planner
 // THEN the current day is displayed at the top of the calendar
+$("#currentDay").text(moment().format("MMM Do YYYY"));
+
 // WHEN I scroll down
 // THEN I am presented with timeblocks for standard business hours
 // WHEN I view the timeblocks for that day
